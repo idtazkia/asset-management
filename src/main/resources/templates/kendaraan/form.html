@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" >
+<head>
+    <meta charset="UTF-8">
+    <title>Kendaraan</title>
+</head>
+<body>
+
+<section layout:fragment="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="x_title">
+                    <h2>Kendaraan</h2>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="my-3 p-3 bg-white rounded box-shadow">
+                    <form method="post" th:action="@{/kendaraan/form}">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Kode Kendaraan</label>
+                                    <input type="text" class="form-control" placeholder="Kode Kendaraan">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Merk Kendaraan</label>
+                                    <input type="text" class="form-control" placeholder="Merk Kendaraan">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Nomor Mesin</label>
+                                    <input type="text" class="form-control" placeholder="Nomor Mesin" >
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Nomor Rangka</label>
+                                    <input type="text" class="form-control" placeholder="Nomor Rangka">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Nomor Polisi</label>
+                                    <input type="text" class="form-control" placeholder="Nomor Polisi">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Tahun</label>
+                                    <input type="text" class="form-control" placeholder="Tahun">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Harga Peroleh</label>
+                                    <input type="text" class="form-control" placeholder="Tahun Peroleh">
+                                </div>
+                            </div>
+                            <div class="col-md-4 offset-8">
+                                <input class="btn btn-primary" type="submit" value="Save">
+                                <a class="btn btn-danger" th:href="@{/kendaraan/list}" role="button">
+                                    <span aria-hidden="true"></span>Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+</body>
+</html>
+<script>
+    $(".js-example-placeholder-single").select2({
+        placeholder: "Select one",
+        allowClear: true
+    });
+</script>

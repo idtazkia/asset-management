@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" >
+<head>
+    <meta charset="UTF-8">
+    <title>Tanah</title>
+</head>
+<body>
+
+<section layout:fragment="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="x_title">
+                    <h2>Gedung</h2>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="my-3 p-3 bg-white rounded box-shadow">
+                    <form method="post" th:action="@{/gedung/form}">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Kode Gedung</label>
+                                    <input type="text" class="form-control" placeholder="Kode Gedung">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Nama Gedung</label>
+                                    <input type="text" class="form-control" placeholder="Nama Gedung">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Alamat Gedung</label>
+                                    <textarea type="text" class="form-control" ></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Luas Gedung</label>
+                                    <input type="text" class="form-control" maxlength="10">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>IMB</label>
+                                    <input type="text" class="form-control" maxlength="20">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Sertifikat Gedung</label>
+                                    <input type="text" class="form-control" placeholder="Sertifikat Gedung">
+                                </div>
+                            </div>
+                            <div class="col-md-11">
+                                <div class="form-group">
+                                    <label>Tahun Berdiri</label>
+                                    <input type="text" class="form-control" placeholder="Tahun Berdiri">
+                                </div>
+                            </div>
+                            <div class="col-md-4 offset-8">
+                                <input class="btn btn-primary" type="submit" value="Save">
+                                <a class="btn btn-danger" th:href="@{/gedung/list}" role="button">
+                                    <span aria-hidden="true"></span>Cancel
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+</body>
+</html>
+<script>
+    $(".js-example-placeholder-single").select2({
+        placeholder: "Select one",
+        allowClear: true
+    });
+
+</script>
