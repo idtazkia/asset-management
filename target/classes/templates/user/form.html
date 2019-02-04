@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" >
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+
+<section layout:fragment="main">
+
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="x_title">
+            <h2>User</h2>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="my-3 p-3 bg-white rounded box-shadow">
+
+            <form method="post" th:action="@{/user/form}">
+
+                <div class="form-group">
+                    <label>User ID</label>
+                    <input type="text" class="form-control" placeholder="User ID">
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" class="form-control" placeholder="Nama Lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <label>Level</label>
+                    <select class="form-control js-example-placeholder-single">
+                        <option>Admin</option>
+                        <option>User</option>
+                    </select>
+                </div>
+
+                <input class="btn btn-primary" type="submit" value="Ok">
+                <a class="btn btn-danger" th:href="@{/user/list}" role="button">
+                    <span aria-hidden="true"></span>Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+<script>
+    $(".js-example-placeholder-single").select2({
+        placeholder: "Select one",
+        allowClear: true
+    });
+
+</script>
